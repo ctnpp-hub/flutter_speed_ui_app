@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class B02PageUi extends StatefulWidget {
-  const B02PageUi({super.key});
+class B03PageUi extends StatefulWidget {
+  const B03PageUi({super.key});
 
   @override
-  State<B02PageUi> createState() => _SigninUiState();
+  State<B03PageUi> createState() => _SigninUiState();
 }
 
-class _SigninUiState extends State<B02PageUi> {
+class _SigninUiState extends State<B03PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Text(
-          'B02 Page',
+          'B03 Page',
           style: GoogleFonts.kanit(fontSize: 40),
         ),
       ),

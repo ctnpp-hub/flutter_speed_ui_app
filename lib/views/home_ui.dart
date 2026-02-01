@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'a01_page_ui.dart';
-import 'a02_page_ui.dart';
 import 'b01_page_ui.dart';
-import 'b02_page_ui.dart';
 import 'c01_page_ui.dart';
+import 'd01_page_ui.dart';
+import 'e01_page_ui.dart';
 
 class HomeUi extends StatelessWidget {
   const HomeUi({super.key});
@@ -11,122 +11,168 @@ class HomeUi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF4A005F),
+      backgroundColor: const Color(0xFF4A005F),
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 150),
+
+            const SizedBox(height: 150),
+
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
                 'assets/images/work.png',
-                width: 250,
-                height: 250,
+                width: 251,
+                height: 229,
                 fit: BoxFit.cover,
               ),
             ),
 
-            SizedBox(height: 30),
-            
-            button(
-              text: 'Go to A Page',
-              color: Colors.pinkAccent,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => A01PageUi(),
+            const SizedBox(height: 50),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const A01PageUi(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(336, 58),
+                    backgroundColor: Colors.pinkAccent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
-                );
-              },
-            ),
-            
-            button(
-              text: 'Go to B Page',
-              color: Colors.indigo,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => A02PageUi(),
+                  child: const Text(
+                    "Go to A Page",
+                    style: TextStyle(color: Colors.white),
                   ),
-                );
-              },
+                ),
+              ],
             ),
 
-            button(
-              text: 'Go to C Page',
-              color: Colors.green,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => B01PageUi(),
+            const SizedBox(height: 20),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const B01PageUi(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(336, 58),
+                    backgroundColor: Colors.indigo,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
-                );
-              },
+                  child: const Text(
+                    "Go to B Page",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
             ),
 
-            button(
-              text: 'Go to D Page',
-              color: Colors.cyan,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => B02PageUi(),
+            const SizedBox(height: 20),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const C01PageUi(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(336, 58),
+                    backgroundColor: Colors.green,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
-                );
-              },
+                  child: const Text(
+                    "Go to C Page",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
             ),
-            
-            button(
-              text: 'Go to E Page',
-              color: Colors.orange,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => C01PageUi(),
+
+            const SizedBox(height: 20),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const D01PageUi(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(336, 58),
+                    backgroundColor: Colors.cyan,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
-                );
-              },
+                  child: const Text(
+                    "Go to D Page",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 20),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const E01PageUi(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(336, 58),
+                    backgroundColor: Colors.orange,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    "Go to E Page",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget button({
-    required String text,
-    required Color color,
-    required VoidCallback onTap,
-    }
-  )
-  
-  {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-      child: SizedBox(
-        width: double.infinity,
-        height: 55,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: color,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14),
-            ),
-          ),
-          onPressed: onTap,
-          child: Text(
-            text,
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Colors.white,
-            ),
-          ),
         ),
       ),
     );

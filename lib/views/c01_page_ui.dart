@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class C01PageUi extends StatelessWidget {
   const C01PageUi({super.key});
@@ -6,9 +7,9 @@ class C01PageUi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('C01 Page')),
+      backgroundColor: Colors.white,
       body: Center(
-        child: Text('C01 Page'),
+        child: Text('C01PageUi',style: GoogleFonts.kanit(fontSize: 30),),
       ),
     );
   }
