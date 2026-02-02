@@ -183,11 +183,14 @@ class _SigninUiState extends State<A02PageUi> {
                 children: [
                   socialGoogle(),
                   const SizedBox(width: 16),
+
                   socialIcon(
                     icon: Icons.facebook,
                     color: Colors.blue,
                   ),
+
                   const SizedBox(width: 16),
+                  
                   socialIcon(
                     icon: Icons.apple,
                     color: Colors.black,

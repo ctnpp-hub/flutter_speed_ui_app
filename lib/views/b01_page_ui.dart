@@ -47,14 +47,16 @@ class B01PageUi extends StatelessWidget {
               child: Image.asset(
                 'assets/images/Rectangle 4.png',
                 height: 295,
-                width: 100,
+                width: 110,
                 fit: BoxFit.fill,
               ),
             ),
 
             Column(
               children: [
+
                 const SizedBox(height: 50),
+
                 Expanded(
                   child: Image.asset(
                     'assets/images/coffee.png',
@@ -106,8 +108,7 @@ class B01PageUi extends StatelessWidget {
                                   builder: (_) => const B02PageUi()
                                 ),
                               );
-                            }
-                            ,
+                            },
                             style: ElevatedButton.styleFrom(
                               fixedSize: Size(MediaQuery.of(context).size.width, 60),
                               backgroundColor: const Color(0xFF1F41BB),
