@@ -182,6 +182,7 @@ class _SigninUiState extends State<A02PageUi> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   socialGoogle(),
+                  
                   const SizedBox(width: 16),
 
                   socialIcon(
