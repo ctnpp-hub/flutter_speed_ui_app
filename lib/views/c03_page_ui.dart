@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_ui_app/views/c02_page_ui.dart';
+import 'c02_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -179,31 +179,28 @@ class _C03PageUiState extends State<C03PageUi> {
 
               Row(
   children: [
-    Checkbox(
-      value: isChecked,
-      onChanged: (v) => setState(() => isChecked = v!),
+    Checkbox( //ช่องติ๊ก  ***ถ้าจะใช้ต้องประกาศตัวแปร bool isChecked = false; ก่อนเสมอ
+      value: isChecked, //สถานะการติ๊ก
+      onChanged: (v) => setState(() => isChecked = v!), //onChanged: เรียกเมื่อผู้ใช้ติ๊ก และ ค่าบังคับให้ติ๊กห้ามเป็นช่องว่าง
     ),
     const Text(
       'I understood the ',
       style: TextStyle(color: Colors.black),
     ),
     TextButton(
-      onPressed: () {
-        print(
-          'open terms & policy',
-          );
-      },
-      style: TextButton.styleFrom(
-        padding: EdgeInsets.zero,
-        minimumSize: Size.zero,
-        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-      ),
-      child: const Text(
-        'terms & policy.',
-        style: TextStyle(
-          color: Colors.green),
-      ),
+  onPressed: () {},
+  style: TextButton.styleFrom(
+    padding: EdgeInsets.zero,
+    minimumSize: Size.zero,
+    tapTargetSize: MaterialTapTargetSize.shrinkWrap, // พื้นที่กดเท่าข้อความ
+  ),
+  child: const Text(
+    'terms & policy.',
+    style: TextStyle(
+      color: Colors.green,
     ),
+  ),
+),
   ],
 ),
 

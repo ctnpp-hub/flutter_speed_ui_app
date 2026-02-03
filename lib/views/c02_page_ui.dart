@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_ui_app/views/c03_page_ui.dart';
+import 'c03_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -175,7 +175,7 @@ class _C02PageUiState extends State<C02PageUi> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don’t have an account? ",
+                    'Don’t have an account?',
                     style: GoogleFonts.poppins(
                       fontSize: 16,
                       fontWeight: FontWeight.w400,
