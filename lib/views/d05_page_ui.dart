@@ -117,6 +117,7 @@ class _D05PageUiState extends State<D05PageUi> {
                 ),
 
                 const SizedBox(height: 35),
+                
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
