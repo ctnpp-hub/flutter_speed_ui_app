@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_ui_app/views/d01_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'd06_page_ui.dart';
 
 class D07PageUi extends StatefulWidget {
   const D07PageUi({super.key});
