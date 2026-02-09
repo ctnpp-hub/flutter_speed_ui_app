@@ -50,7 +50,7 @@ class _D07PageUiState extends State<D07PageUi> {
                 style: GoogleFonts.urbanist(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xFF6B7280),
+                  color: Color(0xFF8391A1),
                 ),
               ),
             ),

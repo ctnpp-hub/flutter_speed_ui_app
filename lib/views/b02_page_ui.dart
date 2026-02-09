@@ -6,10 +6,10 @@ class B02PageUi extends StatefulWidget {
   const B02PageUi({super.key});
 
   @override
-  State<B02PageUi> createState() => _SigninUiState();
+  State<B02PageUi> createState() => _B02PageUiState();
 }
 
-class _SigninUiState extends State<B02PageUi> {
+class _B02PageUiState extends State<B02PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,56 +19,68 @@ class _SigninUiState extends State<B02PageUi> {
           child: Stack(
             children: [
               Align(
-                //ไม่สามารถวางภาพซ้อนได้
                 alignment: Alignment.topRight,
                 child: Image.asset(
                   'assets/images/Ellipse 1.png',
-                  width: 230,
-                  fit: BoxFit.fill,
+                  width: 320,
+                  fit: BoxFit.cover,
                 ),
               ),
               Align(
                 alignment: Alignment.topRight,
                 child: Image.asset(
                   'assets/images/Ellipse 2.png',
-                  height: 265,
-                  width: 390,
-                  fit: BoxFit.fill,
+                  width: 400,
+                  fit: BoxFit.cover,
                 ),
               ),
-              const SizedBox(height: 50),
               Padding(
                 padding: const EdgeInsets.all(40),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 100),
                     Text(
                       'Login here',
                       style: GoogleFonts.poppins(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF1F41BB),
+                        color: const Color(0xFF1F41BB),
                       ),
                     ),
-                    const SizedBox(height: 12),
+                    const SizedBox(height: 20),
                     Text(
-                      'Welcome back you’ve\n been missed!',
+                      'Welcome back you’ve\nbeen missed!',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.poppins(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    const SizedBox(height: 45),
+                    const SizedBox(height: 75),
                     TextField(
                       decoration: InputDecoration(
-                        hintText: 'E-Mail',
+                        hintText: 'Email',
+                        hintStyle: GoogleFonts.poppins(
+                          color: const Color(0xFF626262),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
                         filled: true,
-                        fillColor: Color(0xFFF1F4FF),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide.none,
+                        fillColor: const Color(0xFFF1F4FF),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: const BorderSide(
+                            color: Color(0xFF1F41BB),
+                            width: 2,
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: const BorderSide(
+                            color: Color(0xFF1F41BB),
+                            width: 2,
+                          ),
                         ),
                         contentPadding: const EdgeInsets.symmetric(
                           vertical: 22,
@@ -81,10 +93,15 @@ class _SigninUiState extends State<B02PageUi> {
                       obscureText: true,
                       decoration: InputDecoration(
                         hintText: 'Password',
+                        hintStyle: GoogleFonts.poppins(
+                          color: const Color(0xFF626262),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
                         filled: true,
-                        fillColor: Color(0xFFF1F4FF),
+                        fillColor: const Color(0xFFF1F4FF),
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide.none,
                         ),
                         contentPadding: const EdgeInsets.symmetric(
@@ -99,24 +116,23 @@ class _SigninUiState extends State<B02PageUi> {
                       child: TextButton(
                         onPressed: () {},
                         child: Text(
-                          'Forget Password?',
+                          'Forget your Password?',
                           style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w600,
                             fontSize: 14,
-                            color: Color(0xFF1F41BB),
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1F41BB),
                           ),
                         ),
                       ),
                     ),
                     const SizedBox(height: 20),
-                    
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 60),
-                        backgroundColor: Color(0xFF1F41BB),
+                        backgroundColor: const Color(0xFF1F41BB),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(14),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                       child: Text(
@@ -129,58 +145,65 @@ class _SigninUiState extends State<B02PageUi> {
                       ),
                     ),
                     const SizedBox(height: 30),
-                    Align(
-                      alignment: Alignment.center,
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const B03PageUi(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'Create new account',
-                          style: GoogleFonts.poppins(
-                              fontSize: 14, color: Colors.black),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 65),
-                    Align(
-                      alignment: Alignment.center,
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Or continue with',
-                          style: GoogleFonts.poppins(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xFF1F41BB),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const B03PageUi(),
                           ),
+                        );
+                      },
+                      child: Text(
+                        'Create new account',
+                        style: GoogleFonts.poppins(
+                          color: const Color(0xFF494949),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
-                    const SizedBox(height: 15),
+                    const SizedBox(height: 50),
+                    Text(
+                      'Or continue with',
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: const Color(0xFF1F41BB),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        socialIcon(
-                          icon: Icons.g_mobiledata,
-                          color: Colors.black,
-                          size: 50,
+                        Container(
+                          width: 55,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFECECEC),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Icon(Icons.g_mobiledata, size: 40),
                         ),
                         const SizedBox(width: 15),
-                        socialIcon(
-                          icon: Icons.facebook,
-                          color: Colors.black,
+                        Container(
+                          width: 55,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFECECEC),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Icon(Icons.facebook),
                         ),
                         const SizedBox(width: 15),
-                        socialIcon(
-                          icon: Icons.apple,
-                          color: Colors.black,
-                          size: 32,
+                        Container(
+                          width: 55,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFECECEC),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Icon(Icons.apple),
                         ),
                       ],
                     ),
@@ -190,36 +213,6 @@ class _SigninUiState extends State<B02PageUi> {
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  Widget socialIcon({
-    required IconData icon,
-    required Color color,
-    double size = 30,
-  }) {
-    return socialBase(
-      child: Icon(
-        icon,
-        size: size,
-        color: color,
-      ),
-    );
-  }
-
-  Widget socialBase({required Widget child}) {
-    return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.circular(30),
-      child: Container(
-        width: 70,
-        height: 50,
-        decoration: BoxDecoration(
-          color: Color(0xFFECECEC),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Center(child: child),
       ),
     );
   }

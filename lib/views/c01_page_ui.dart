@@ -11,11 +11,13 @@ class C01PageUi extends StatefulWidget {
 
 class _C01PageUiState extends State<C01PageUi> {
   @override
-  void initState() { //หน่วงเวลา3วิ
+  void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => C02PageUi()));
+        context,
+        MaterialPageRoute(builder: (context) => const C02PageUi()),
+      );
     });
   }
 
@@ -25,71 +27,59 @@ class _C01PageUiState extends State<C01PageUi> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Stack(
+          fit: StackFit.expand,
           children: [
-            Positioned.fill(
-              child: Image.asset(
-                'assets/images/female.png',
-                fit: BoxFit.cover,
-              ),
+            Image.asset(
+              'assets/images/female.png',
+              fit: BoxFit.cover,
             ),
-            Positioned.fill(
-              child: Column(
-                children: [
-
-                  const SizedBox(height: 300),
-
-                  Container(
-                    width: 121,
-                    height: 121,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Center(
-                      child: Image.asset(
-                        'assets/images/H.png',
-                        width: 120,
-                        height: 120,
-                      ),
+            Column(
+              children: [
+                const SizedBox(height: 300),
+                Container(
+                  width: 121,
+                  height: 121,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/H.png',
+                      width: 120,
+                      height: 120,
                     ),
                   ),
-
-                  const SizedBox(height: 20),
-
-                  Text(
-                    'HOPE FOR',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.poppins(
-                      color: Colors.white,
-                      fontSize: 36,
-                      fontWeight: FontWeight.w500,
-                    ),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  'HOPE FOR',
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontSize: 36,
+                    fontWeight: FontWeight.w500,
                   ),
-
-                  Text(
-                    'HUMANITY',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.poppins(
-                      color: Colors.white,
-                      fontSize: 36,
-                      height: 0.6,
-                      fontWeight: FontWeight.w700,
-                    ),
+                ),
+                Text(
+                  'HUMANITY',
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontSize: 36,
+                    height: 0.6,
+                    fontWeight: FontWeight.w700,
                   ),
-
-                  const SizedBox(height: 153),
-                  
-                  Text(
-                    'Welcome to\n hope for humanity',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.poppins(
-                      color: Color(0xFF005014),
-                      fontSize: 29,
-                      fontWeight: FontWeight.w600,
-                    ),
+                ),
+                const SizedBox(height: 180),
+                Text(
+                  'Welcome to\nhope for humanity',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    color: const Color(0xFF005014),
+                    fontSize: 29,
+                    fontWeight: FontWeight.w600,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),

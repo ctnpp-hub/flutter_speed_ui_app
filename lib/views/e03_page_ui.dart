@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'e02_page_ui.dart';
 
 class E03PageUi extends StatefulWidget {
   const E03PageUi({super.key});
@@ -145,7 +144,7 @@ class _E03PageUiState extends State<E03PageUi> {
                         'By signing up you agree to our ',
                         style: GoogleFonts.poppins(
                           fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           color: Colors.black,
                         ),
                       ),
@@ -177,7 +176,7 @@ class _E03PageUiState extends State<E03PageUi> {
                         'and ',
                         style: GoogleFonts.poppins(
                           fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           color: Colors.black,
                         ),
                       ),
@@ -205,11 +204,11 @@ class _E03PageUiState extends State<E03PageUi> {
                 ],
               ),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Container(
-                height: 50,
+                height: 55,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   gradient: const LinearGradient(
@@ -238,7 +237,7 @@ class _E03PageUiState extends State<E03PageUi> {
                 children: [
                   Expanded(
                     child: Container(
-                      height: 1,
+                      height: 1.5,
                       decoration: const BoxDecoration(
                         gradient: LinearGradient(
                           begin: Alignment.centerLeft,
@@ -251,7 +250,6 @@ class _E03PageUiState extends State<E03PageUi> {
                       ),
                     ),
                   ),
-                  
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Text(
@@ -265,7 +263,7 @@ class _E03PageUiState extends State<E03PageUi> {
                   ),
                   Expanded(
                     child: Container(
-                      height: 1,
+                      height: 1.5,
                       decoration: const BoxDecoration(
                         gradient: LinearGradient(
                           begin: Alignment.centerLeft,
@@ -281,7 +279,7 @@ class _E03PageUiState extends State<E03PageUi> {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

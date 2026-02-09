@@ -12,6 +12,7 @@ class C03PageUi extends StatefulWidget {
 
 class _C03PageUiState extends State<C03PageUi> {
   bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,26 +24,15 @@ class _C03PageUiState extends State<C03PageUi> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
-
               Align(
                 alignment: Alignment.topRight,
-                child: Container(
-                  width: 25,
-                  height: 25,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Image.asset(
-                    'assets/images/H_frame.png',
-                    width: 120,
-                    height: 120,
-                    fit: BoxFit.cover,
-                  ),
+                child: Image.asset(
+                  'assets/images/H_frame.png',
+                  width: 30,
+                  height: 30,
                 ),
               ),
-
               const SizedBox(height: 35),
-
               Center(
                 child: Text(
                   'Create your account',
@@ -52,160 +42,142 @@ class _C03PageUiState extends State<C03PageUi> {
                   ),
                 ),
               ),
-
-              const SizedBox(height: 20),
-
+              const SizedBox(height: 30),
               Text(
                 'Name',
                 style: GoogleFonts.poppins(
-                  fontSize: 16
-                  ),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
-
               const SizedBox(height: 5),
-
               TextField(
                 decoration: InputDecoration(
                   hintText: 'ex: Jon Smith',
-                  hintStyle: const TextStyle(
-                    color: Color(0xFF888888),
-                    fontSize: 15,
-                  ),
                   filled: true,
-                  fillColor: const Color(0xFFF1F4FF),
+                  fillColor: const Color(0xFFFAFAFA),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(10),
                     borderSide: BorderSide.none,
                   ),
                   contentPadding: const EdgeInsets.symmetric(
-                    vertical: 22,
+                    vertical: 15,
                     horizontal: 20,
                   ),
                 ),
               ),
-
               const SizedBox(height: 10),
-
               Text(
                 'Email',
                 style: GoogleFonts.poppins(
-                  fontSize: 16
-                  ),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
-
               const SizedBox(height: 5),
-
               TextField(
                 decoration: InputDecoration(
                   hintText: 'ex: jon.smith@email.com',
-                  hintStyle: const TextStyle(
-                    color: Color(0xFF888888),
-                    fontSize: 15,
-                  ),
                   filled: true,
-                  fillColor: const Color(0xFFF1F4FF),
+                  fillColor: const Color(0xFFFAFAFA),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(10),
                     borderSide: BorderSide.none,
                   ),
                   contentPadding: const EdgeInsets.symmetric(
-                    vertical: 22,
+                    vertical: 15,
                     horizontal: 20,
                   ),
                 ),
               ),
-
-              const SizedBox(height: 10 ),
-
+              const SizedBox(height: 10),
               Text(
                 'Password',
-                style: GoogleFonts.poppins(fontSize: 16),
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
-
               const SizedBox(height: 5),
-
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: '*********',
-                  hintStyle: const TextStyle(
-                    color: Color(0xFF888888),
-                    fontSize: 15,
-                  ),
                   filled: true,
-                  fillColor: const Color(0xFFF1F4FF),
+                  fillColor: const Color(0xFFFAFAFA),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(10),
                     borderSide: BorderSide.none,
                   ),
                   contentPadding: const EdgeInsets.symmetric(
-                    vertical: 22,
+                    vertical: 15,
                     horizontal: 20,
                   ),
                 ),
               ),
-
               const SizedBox(height: 10),
-
               Text(
                 'Confirm Password',
-                style: GoogleFonts.poppins(fontSize: 16),
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
-
               const SizedBox(height: 5),
-
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: '*********',
-                  hintStyle: const TextStyle(
-                    color: Color(0xFF888888),
-                    fontSize: 15,
-                  ),
                   filled: true,
-                  fillColor: const Color(0xFFF1F4FF),
+                  fillColor: const Color(0xFFFAFAFA),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(10),
                     borderSide: BorderSide.none,
                   ),
                   contentPadding: const EdgeInsets.symmetric(
-                    vertical: 22,
+                    vertical: 15,
                     horizontal: 20,
                   ),
                 ),
               ),
-
               const SizedBox(height: 10),
-
               Row(
-  children: [
-    Checkbox( //ช่องติ๊ก  ***ถ้าจะใช้ต้องประกาศตัวแปร bool isChecked = false; ก่อนเสมอ
-      value: isChecked, //สถานะการติ๊ก
-      onChanged: (v) => setState(() => isChecked = v!), //onChanged: เรียกเมื่อผู้ใช้ติ๊ก และ ค่าบังคับให้ติ๊กห้ามเป็นช่องว่าง
-    ),
-    const Text(
-      'I understood the ',
-      style: TextStyle(color: Colors.black),
-    ),
-    TextButton(
-  onPressed: () {},
-  style: TextButton.styleFrom(
-    padding: EdgeInsets.zero,
-    minimumSize: Size.zero,
-    tapTargetSize: MaterialTapTargetSize.shrinkWrap, // พื้นที่กดเท่าข้อความ
-  ),
-  child: const Text(
-    'terms & policy.',
-    style: TextStyle(
-      color: Colors.green,
-    ),
-  ),
-),
-  ],
-),
-
+                children: [
+                  Checkbox(
+                    value: isChecked,
+                    onChanged: null,
+                    side: const BorderSide(
+                      color: Color(0xFF00B140),
+                      width: 1,
+                    ),
+                  ),
+                  Text(
+                    'I understood the ',
+                    style: GoogleFonts.poppins(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    child: Text(
+                      'terms & policy.',
+                      style: GoogleFonts.poppins(
+                        color: Color(0xFF00B140),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(height: 10),
-
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -216,17 +188,15 @@ class _C03PageUiState extends State<C03PageUi> {
                   ),
                 ),
                 child: Text(
-                  'SIGN IN',
+                  'SIGN UP',
                   style: GoogleFonts.poppins(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
                     color: Colors.white,
                   ),
                 ),
               ),
-
               const SizedBox(height: 25),
-
               Center(
                 child: Text(
                   'or sign up with',
@@ -236,33 +206,59 @@ class _C03PageUiState extends State<C03PageUi> {
                   ),
                 ),
               ),
-
               const SizedBox(height: 25),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  socialGoogle(),
-
-                  const SizedBox(width: 15),
-
-                  socialIcon(
-                    icon: FontAwesomeIcons.facebookF,
-                    color: Colors.blue,
+                  Container(
+                    width: 80,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF4F4F4),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/googlelogo.png',
+                        width: 30,
+                      ),
+                    ),
                   ),
-
                   const SizedBox(width: 15),
-
-                  socialIcon(
-                    icon: FontAwesomeIcons.twitter,
-                    color: Color(0xFF1DA1F2),
-                    size: 32
+                  Container(
+                    width: 80,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF4F4F4),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        FontAwesomeIcons.facebookF,
+                        color: Colors.blue,
+                        size: 28,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 15),
+                  Container(
+                    width: 80,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF4F4F4),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        FontAwesomeIcons.twitter,
+                        color: Color(0xFF1DA1F2),
+                        size: 32,
+                      ),
+                    ),
                   ),
                 ],
               ),
-
               const SizedBox(height: 30),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -284,16 +280,15 @@ class _C03PageUiState extends State<C03PageUi> {
                       );
                     },
                     style: TextButton.styleFrom(
-        padding: EdgeInsets.zero,
-        minimumSize: Size.zero,
-        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-      ),
-
+                      padding: EdgeInsets.zero,
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
                     child: Text(
                       ' SIGN IN',
                       style: GoogleFonts.poppins(
                         fontSize: 16,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w400,
                         color: const Color(0xFF00B140),
                       ),
                     ),
@@ -303,41 +298,6 @@ class _C03PageUiState extends State<C03PageUi> {
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  Widget socialGoogle() {
-    return socialBase(
-      child: Image.asset(
-        'assets/images/googlelogo.png',
-        width: 30,
-      ),
-    );
-  }
-
-  Widget socialIcon({
-    required IconData icon,
-    required Color color,
-    double size = 28,
-  }) {
-    return socialBase(
-      child: Icon(icon, size: size, color: color),
-    );
-  }
-
-  Widget socialBase({required Widget child}) {
-    return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.circular(10),
-      child: Container(
-        width: 80,
-        height: 50,
-        decoration: BoxDecoration(
-          color: const Color(0xFFF4F4F4),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Center(child: child),
       ),
     );
   }

@@ -18,11 +18,38 @@ class _E02PageUiState extends State<E02PageUi> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset(
-              'assets/images/orange.png',
-              width: double.infinity,
-              fit: BoxFit.cover,
+            Stack(
+              children: [
+                Image.asset(
+                  'assets/images/orange.png',
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                Positioned(
+                  top: 40,
+                  left: 20,
+                  child: Container(
+                    width: 48,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF8EEC0),
+                      shape: BoxShape.circle,
+                    ),
+                    child: IconButton(
+                      icon: const Icon(
+                        Icons.arrow_back_ios_new,
+                        color: Colors.white,
+                        size: 22,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                  ),
+                ),
+              ],
             ),
+            const SizedBox(height: 20),
             Text(
               'Welcome back',
               style: GoogleFonts.poppins(
@@ -50,10 +77,6 @@ class _E02PageUiState extends State<E02PageUi> {
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: const BorderSide(
-                      color: Color(0xFF8B8B8B),
-                      width: 1,
-                    ),
                   ),
                   contentPadding: const EdgeInsets.symmetric(
                     vertical: 15,
@@ -75,20 +98,14 @@ class _E02PageUiState extends State<E02PageUi> {
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: const BorderSide(
-                      color: Color(0xFF8B8B8B),
-                      width: 1,
-                    ),
                   ),
                   contentPadding: const EdgeInsets.symmetric(
                     vertical: 15,
                     horizontal: 15,
                   ),
-                  suffixIcon: IconButton(
+                  suffixIcon: Padding(
                     padding: const EdgeInsets.only(right: 15),
-                    constraints: const BoxConstraints(),
-                    onPressed: () {},
-                    icon: Image.asset(
+                    child: Image.asset(
                       'assets/images/eyeinvisible.png',
                       width: 25,
                     ),
@@ -111,11 +128,6 @@ class _E02PageUiState extends State<E02PageUi> {
                         ),
                       );
                     },
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      minimumSize: Size.zero,
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    ),
                     child: Text(
                       'Forgot Password?',
                       style: GoogleFonts.poppins(
@@ -131,7 +143,7 @@ class _E02PageUiState extends State<E02PageUi> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Container(
-                height: 50,
+                height: 55,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   gradient: const LinearGradient(
@@ -141,68 +153,18 @@ class _E02PageUiState extends State<E02PageUi> {
                     ],
                   ),
                 ),
-                child: Center(
-                  child: Text(
-                    'Log In',
-                    style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                alignment: Alignment.center,
+                child: Text(
+                  'Log In',
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: 1,
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [
-                            Color(0x00FFC52A),
-                            Color(0xFFFFC52A),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Text(
-                      'OR',
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      height: 1,
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [
-                            Color(0xFFFFC52A),
-                            Color(0x00FFC52A),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 35),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -216,7 +178,7 @@ class _E02PageUiState extends State<E02PageUi> {
                 const SizedBox(width: 20),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.facebook,
                     color: Colors.blue,
                     size: 40,
@@ -225,7 +187,7 @@ class _E02PageUiState extends State<E02PageUi> {
                 const SizedBox(width: 20),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.apple,
                     color: Colors.black,
                     size: 40,
@@ -233,17 +195,13 @@ class _E02PageUiState extends State<E02PageUi> {
                 ),
               ],
             ),
-            const SizedBox(height: 45),
+            const SizedBox(height: 35),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Don’t have an Account?',
-                  style: GoogleFonts.poppins(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: const Color(0xFF000000),
-                  ),
+                  style: GoogleFonts.poppins(fontSize: 12),
                 ),
                 TextButton(
                   onPressed: () {
@@ -254,16 +212,10 @@ class _E02PageUiState extends State<E02PageUi> {
                       ),
                     );
                   },
-                  style: TextButton.styleFrom(
-                    padding: EdgeInsets.zero,
-                    minimumSize: Size.zero,
-                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  ),
                   child: Text(
-                    ' Create Account',
+                    'Create Account',
                     style: GoogleFonts.poppins(
                       fontSize: 12,
-                      fontWeight: FontWeight.w400,
                       color: const Color(0xFFF79515),
                     ),
                   ),

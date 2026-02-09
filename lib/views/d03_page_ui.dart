@@ -11,75 +11,55 @@ class D03PageUi extends StatefulWidget {
 }
 
 class _D03PageUiState extends State<D03PageUi> {
-  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Stack(
-        children: [
-        Padding(
+      body: Center(
+        child: Padding(
           padding: const EdgeInsets.all(40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              InkWell(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                borderRadius: BorderRadius.circular(14),
-                child: Container(
-                  width: 48,
-                  height: 48,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(
-                      color: Color(0xFFE5E7EB),
-                      width: 1,
-                    ),
-                  ),
-                  child: const Center(
-                    child: Icon(
-                      Icons.arrow_back_ios_new,
-                      size: 20,
-                      color: Color(0xFF111827),
-                    ),
-                  ),
+              Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                  border: Border.all(color: const Color(0xFFE5E7EB)),
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: IconButton(
+                  icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 ),
               ),
               const SizedBox(height: 35),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Hello! Register to get \nstarted',
-                  textAlign: TextAlign.left,
-                  style: GoogleFonts.urbanist(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
-                  ),
+              Text(
+                'Hello! Register to get \nstarted',
+                style: GoogleFonts.urbanist(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFFF7F8F9), // พื้นหลังในกล่อง
+                  color: const Color(0xFFF7F8F9),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: const Color(0xFFE8ECF4), // สีขอบ
-                    width: 1,
-                  ),
+                  border: Border.all(color: const Color(0xFFE8ECF4)),
                 ),
                 child: TextField(
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Username',
-                    hintStyle: TextStyle(
-                      fontSize: 15,
-                      fontStyle: FontStyle.normal,
+                    hintStyle: GoogleFonts.urbanist(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
                       color: Colors.grey,
                     ),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       vertical: 20,
                       horizontal: 20,
                     ),
@@ -89,23 +69,20 @@ class _D03PageUiState extends State<D03PageUi> {
               const SizedBox(height: 15),
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFFF7F8F9), // พื้นหลังในกล่อง
+                  color: const Color(0xFFF7F8F9),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: const Color(0xFFE8ECF4), // สีขอบ
-                    width: 1,
-                  ),
+                  border: Border.all(color: const Color(0xFFE8ECF4)),
                 ),
                 child: TextField(
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Email',
-                    hintStyle: TextStyle(
+                    hintStyle: GoogleFonts.urbanist(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
                       color: Colors.grey,
-                      fontSize: 15,
-                      fontStyle: FontStyle.normal,
                     ),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       vertical: 20,
                       horizontal: 20,
                     ),
@@ -115,24 +92,20 @@ class _D03PageUiState extends State<D03PageUi> {
               const SizedBox(height: 15),
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFFF7F8F9), // พื้นหลังในกล่อง
+                  color: const Color(0xFFF7F8F9),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: const Color(0xFFE8ECF4), // สีขอบ
-                    width: 1,
-                  ),
+                  border: Border.all(color: const Color(0xFFE8ECF4)),
                 ),
                 child: TextField(
-                  obscureText: true,
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Password',
-                    hintStyle: TextStyle(
-                      fontSize: 15,
-                      fontStyle: FontStyle.normal,
+                    hintStyle: GoogleFonts.urbanist(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
                       color: Colors.grey,
                     ),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       vertical: 20,
                       horizontal: 20,
                     ),
@@ -142,24 +115,20 @@ class _D03PageUiState extends State<D03PageUi> {
               const SizedBox(height: 15),
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFFF7F8F9), // พื้นหลังในกล่อง
+                  color: const Color(0xFFF7F8F9),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: const Color(0xFFE8ECF4), // สีขอบ
-                    width: 1,
-                  ),
+                  border: Border.all(color: const Color(0xFFE8ECF4)),
                 ),
                 child: TextField(
-                  obscureText: true,
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'Confirm password',
-                    hintStyle: TextStyle(
-                      fontSize: 15,
-                      fontStyle: FontStyle.normal,
+                    hintText: 'Comfirm Password',
+                    hintStyle: GoogleFonts.urbanist(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
                       color: Colors.grey,
                     ),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       vertical: 20,
                       horizontal: 20,
                     ),
@@ -189,11 +158,8 @@ class _D03PageUiState extends State<D03PageUi> {
               Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      height: 1,
-                      color: const Color(0xFFE8ECF4),
-                    ),
-                  ),
+                      child:
+                          Container(height: 1, color: const Color(0xFFE8ECF4))),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: Text(
@@ -206,38 +172,62 @@ class _D03PageUiState extends State<D03PageUi> {
                     ),
                   ),
                   Expanded(
-                    child: Container(
-                      height: 1,
-                      color: const Color(0xFFE8ECF4),
-                    ),
-                  ),
+                      child:
+                          Container(height: 1, color: const Color(0xFFE8ECF4))),
                 ],
               ),
               const SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  socialIcon(
-                    icon: FontAwesomeIcons.facebookF,
-                    color: Colors.blue,
+                  Container(
+                    width: 80,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF4F4F4),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Center(
+                      child:
+                          Icon(FontAwesomeIcons.facebookF, color: Colors.blue),
+                    ),
                   ),
                   const SizedBox(width: 15),
-                  socialGoogle(),
+                  Container(
+                    width: 80,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF4F4F4),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/googlelogo.png',
+                        width: 25,
+                      ),
+                    ),
+                  ),
                   const SizedBox(width: 15),
-                  socialIcon(icon: Icons.apple, color: Colors.black, size: 35),
+                  Container(
+                    width: 80,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF4F4F4),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Center(
+                      child: Icon(Icons.apple, size: 35),
+                    ),
+                  ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Already have an account?',
-                    style: GoogleFonts.urbanist(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: const Color(0xFF1E232C),
-                    ),
+                    style: GoogleFonts.urbanist(fontSize: 16),
                   ),
                   TextButton(
                     onPressed: () {
@@ -248,11 +238,6 @@ class _D03PageUiState extends State<D03PageUi> {
                         ),
                       );
                     },
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      minimumSize: Size.zero,
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    ),
                     child: Text(
                       ' Login Now',
                       style: GoogleFonts.urbanist(
@@ -267,42 +252,6 @@ class _D03PageUiState extends State<D03PageUi> {
             ],
           ),
         ),
-        ],
-      ),
-    );
-  }
-
-  Widget socialGoogle() {
-    return socialBase(
-      child: Image.asset(
-        'assets/images/googlelogo.png',
-        width: 25,
-      ),
-    );
-  }
-
-  Widget socialIcon({
-    required IconData icon,
-    required Color color,
-    double size = 24,
-  }) {
-    return socialBase(
-      child: Icon(icon, size: size, color: color),
-    );
-  }
-
-  Widget socialBase({required Widget child}) {
-    return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.circular(10),
-      child: Container(
-        width: 80,
-        height: 50,
-        decoration: BoxDecoration(
-          color: const Color(0xFFF4F4F4),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Center(child: child),
       ),
     );
   }
